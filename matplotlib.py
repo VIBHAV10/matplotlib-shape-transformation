@@ -3,11 +3,7 @@ import matplotlib.pyplot as plt
 
 
 class Shape:
-    '''
-    DO NOT MODIFY THIS CLASS
-
-    DO NOT ADD ANY NEW METHODS TO THIS CLASS
-    '''
+   
     def __init__(self):
         self.T_s = None
         self.T_r = None
@@ -15,23 +11,17 @@ class Shape:
     
     
     def translate(self, dx, dy):
-        '''
-        Polygon and Circle class should use this function to calculate the translation
-        '''
+        
         self.T_t = np.array([[1, 0, dx], [0, 1, dy], [0, 0, 1]])
  
 
     def scale(self, sx, sy):
-        '''
-        Polygon and Circle class should use this function to calculate the scaling
-        '''
+        
         self.T_s = np.array([[sx, 0, 0], [0, sy, 0], [0, 0, 1]])
  
         
     def rotate(self, deg):
-        '''
-        Polygon and Circle class should use this function to calculate the rotation
-        '''
+        
         rad = deg*(np.pi/180)
         self.T_r = np.array([[np.cos(rad), np.sin(rad), 0],[-np.sin(rad), np.cos(rad),0], [0, 0, 1]])
 
@@ -52,9 +42,7 @@ class Shape:
 
 
 class Polygon(Shape):
-    '''
-    Object of class Polygon should be created when shape type is 'polygon'
-    '''
+    
     def __init__(self, A):
         '''
         Initializations here
@@ -65,13 +53,7 @@ class Polygon(Shape):
  
     
     def translate(self, dx, dy):
-        '''
-        Function to translate the polygon
-    
-        This function takes 2 arguments: dx and dy
-    
-        This function returns the final coordinates
-        '''
+        
         self.coordinates_old = self.coordinates.copy()
         #self.coordinates_old = np.around(self.coordinates_old, 2) 
 
