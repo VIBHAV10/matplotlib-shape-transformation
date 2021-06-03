@@ -525,7 +525,7 @@ if __name__ == "__main__":
                     
                     elif query[0].lower() == 'p':
 
-                        poly.plot()
+                        poly.plot()  
                 
             else:
                 att = input('Enter coordinates of center and radius of circle(x y r): ').split()
