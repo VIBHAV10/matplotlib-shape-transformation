@@ -1,7 +1,7 @@
 from requests import session
 import streamlit as st 
-import  shape as shape
-import func as func
+import  streamlitVersion.shape as shape
+import streamlitVersion.func as func
 import matplotlib.pyplot as plt
 
 #Title of the Project
